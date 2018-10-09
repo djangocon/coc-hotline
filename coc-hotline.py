@@ -207,8 +207,10 @@ def incoming_sms():
     }]
     send_slack_message(f'<!channel>', msg_attachments)
     response = MessagingResponse()
-    response.message("Thank you for contacting the PyCon US incident hotline, "
-                     f"a responder will contact you at {incoming_number}.")
+    response.message(
+        "Thank you for contacting the DjangoCon US incident hotline, "
+        f"a responder will contact you at {incoming_number}."
+    )
     return str(response)
 
 
